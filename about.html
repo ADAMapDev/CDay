@@ -46,9 +46,6 @@
       margin: auto;
       font-size: 1.1rem;
     }
-    .buttons {
-      margin-top: 2rem;
-    }
     .buttons a {
       display: inline-block;
       background: #0066cc;
@@ -63,13 +60,13 @@
       background: #004999;
     }
     ul {
-        list-style-position: inside; 
-        padding: 0;     
-        margin: 0;
+      list-style-position: inside; 
+      padding: 0;     
+      margin: 0;
     }
     li {
-        padding: 0; 
-        margin: 0; 
+      padding: 0; 
+      margin: 0; 
     }
     footer {
       text-align: center;
@@ -77,6 +74,49 @@
       background: #222;
       color: #fff;
       margin-top: 2rem;
+    }
+    
+    /* Gallery Section Styles */
+    .gallery {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .row {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .top-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .bottom-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    figure {
+      margin: 0;
+    }
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top; /* <--- THIS keeps heads in frame */
+        display: block;
+    }       
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* Caption styling */
+    figcaption {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 5px;
+      font-style: italic;
+      padding: 5px;
     }
   </style>
 </head>
@@ -91,25 +131,65 @@
 
   <section class="hero">
     <h2>About</h2>
-    <p>The Accessible Map Project is a cutting‐edge web-based interactive navigation system designed specifically to address the mobility and visual needs of users, with a particular focus on the community at Kennesaw State University. This project combines innovative routing technology with accessibility-driven design, ensuring that individuals with disabilities—be they wheelchair users, visually impaired, or those using assistive technology—can effortlessly navigate complex campus environments. The application is accessible via <strong style="color: #004999;">modern web browsers on desktops, tablets, and smartphones,</strong> making it a versatile tool for everyday use.</p>
+    <p>The Accessible Map Project is a cutting‐edge web-based interactive navigation system designed specifically to address the mobility and visual needs of users, with a particular focus on the community at Kennesaw State University. This project combines innovative routing technology with accessibility-driven design, ensuring that individuals with disabilities—be they wheelchair users, visually impaired, or those using assistive technology—can effortlessly navigate complex campus environments. The application is accessible via <strong>modern web browsers on desktops, tablets, and smartphones,</strong> making it a versatile tool for everyday use.</p>
     <br>
     <h4>Project Vision and Goals</h4>
     <p>At its core, the Accessible Map Project is about breaking down barriers. With the primary goal of creating an environment that unites real-time navigation with enhanced accessibility, the project seeks to:</p>
     <ul>
-        <li>Provide users with an intuitive interface <strong style="color: #004999;"> to select start and end points while optimizing routes based on accessibility criteria.</strong></li>
-        <li>Provide users data on the data of the route, including <strong style="color: #004999;">distance, estimated time, and accessibility features.</strong></li>
-        <li>Offer comprehensive data of accessible features on campus, including <strong style="color: #004999;">ramps, and accessible doors.</strong></li>
+      <li>Provide users with an intuitive interface <strong style="color: #004999;">to select start and end points while optimizing routes based on accessibility criteria.</strong></li>
+      <li>Provide users data on the route, including <strong style="color: #004999;">distance, estimated time, and accessibility features.</strong></li>
+      <li>Offer comprehensive data of accessible features on campus, including <strong style="color: #004999;">ramps and accessible doors.</strong></li>
     </ul>
     <br>
     <h4>Front-End Development</h4>
-    <p>The user interface was built with a focus on <strong style="color: #004999;">simplicity and usability.</strong> Using <strong style="color: #004999;">React's responsive design framework,</strong> the application accommodates a wide range of devices while ensuring that essential accessibility features remain front and center. The intuitive layout—combined with elements like <strong style="color: #004999;">side menus, clear input fields, and a dynamic map display</strong>—empowers users to engage with the application with minimal friction. <strong style="color: #004999;"> A High-contrast visual theme</strong> assure that users with visual experience a seamless interaction.</p>
+    <p>The user interface was built with a focus on <strong style="color: #004999;">simplicity and usability.</strong> Using <strong style="color: #004999;">React's responsive design framework,</strong> the application accommodates a wide range of devices while ensuring that essential accessibility features remain front and center. Side menus, clear input fields, and a dynamic map display empower users to interact with the app with minimal friction. A <strong style="color: #004999;">high-contrast visual theme</strong> ensures that users with visual impairments experience seamless interaction.</p>
     <br>
     <h4>Back-End Development</h4>
-    <p>Under the hood, the Accessible Map Project leverages a secure and scalable backend architecture. <strong style="color:#004999">User account management, including registration, login, and even an anonymous (guest) access mode,</strong> is managed through a <strong style="color: #004999;">PostgreSQL database.</strong> This component serves as the backbone for storing credentials, user preferences, and route data, ensuring that all personal information is handled securely. In addition, integration with external mapping services—such as <strong style="color:#004999">Google Maps API</strong> — facilitates real-time route optimization, enabling the system to dynamically calculate paths that factor in accessibility features like ramps, elevators, and curb cuts.</p>
+    <p>Under the hood, the Accessible Map Project leverages a secure and scalable backend architecture. <strong style="color:#004999">User account management, including registration, login, and an anonymous (guest) access mode,</strong> is managed through a <strong style="color: #004999;">PostgreSQL database.</strong> This setup secures credentials, user preferences, and route data. Integration with external mapping services—such as <strong style="color:#004999">Google Maps API</strong>—facilitates real-time route optimization that considers ramps, elevators, and curb cuts.</p>
+    <br>
+    <h2>Meet the Team!</h2>
 </section>
+  <!-- FIX IMAGE SIZES -->
+  <section class="gallery">
+    <!-- Top row: 3 images with captions -->
+    <div class="row top-row">
+      <figure>
+        <div class="image-container">
+          <img src="/headshots/justinC.jpg" alt="Justin Connick">
+        </div>
+        <figcaption><a href="https://www.linkedin.com/in/justin-connick-75858335a">Justin Connick</a> - UX, Back-end</figcaption>
+      </figure>
+      <figure>
+        <div class="image-container">
+          <img src="/headshots/meganI.jpg" alt="Megan Ingram">
+        </div>
+        <figcaption><a href="https://www.linkedin.com/in/meganningram/">Megan Ingram</a> - Front-End, Documentation</figcaption>
+      </figure>
+      <figure>
+        <div class="image-container">
+          <img src="/headshots/derrickN.jpg" alt="Derrick Novak">
+        </div>
+        <figcaption><a href="https://www.linkedin.com/in/derrick-novak889/">Derrick Novak</a> - Back-end</figcaption>
+      </figure>
+    </div>
 
+    <!-- Bottom row: 2 images with captions -->
+    <div class="row bottom-row">
+      <figure>
+        <div class="image-container">
+          <img src="/headshots/spencerW.jpg" alt="Spencer Williams">
+        </div>
+        <figcaption><a href="https://www.linkedin.com/in/spencer-a-williams/">Spencer Williams</a> - Team Lead, Documentation</figcaption>
+      </figure>
+      <figure>
+        <div class="image-container">
+          <img src="/headshots/emilyZ.jpg" alt="Emily Zhu">
+        </div>
+        <figcaption><a href="https://www.linkedin.com/in/emilyxzhu/">Emily Zhu</a> - Front-End, Back-end</a></figcaption>
+      </figure>
+    </div>
+  </section>
 
-  
   <footer>
     <p>© 2025 ADA Map Dev Team</p>
   </footer>
