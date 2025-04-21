@@ -70,16 +70,14 @@
     .buttons a:hover {
       background: #004999;
     }
-    .video-preview {
-      margin: 3rem auto;
-      max-width: 900px;
-      height: 400px;
-      background: #ddd;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #666;
-      font-size: 1.2rem;
+    ul {
+      list-style-position: inside; 
+      padding: 0;     
+      margin: 0;
+    }
+    li {
+      padding: 0; 
+      margin: 0; 
     }
     footer {
       text-align: center;
@@ -101,7 +99,19 @@
 
   <section class="hero">
     <h2>Design</h2>
-    <p>During the design phase of the SDLC, the team heavily considered those with color vision deficiency. Although high-contrast mode was a Won’t have feature due to time constraints, we still wanted the UI to appear as accessible as possible. Therefore, AIM’s color scheme consists of a monochromatic, high-contrast design for easy element distinguishing. When displaying elevation changes, the shifts are denoted using starkly different colors: red, yellow, teal, and green. Additionally, AIM prioritizes visual cues:</p>
+    <p>During the design phase of the SDLC, the team heavily considered those with color vision deficiency. Although high-contrast mode was a Won’t have feature due to time constraints, we still wanted the UI to appear as accessible as possible. Therefore, AIM’s color scheme consists of a monochromatic, high-contrast design for easy element distinguishing.
+    <br>
+    <p>When displaying elevation changes, the shifts between two instructions are denoted using starkly different colors:</p>
+    <br>
+    <ul>
+      <li><strong style="color: black;">Red:</strong> 1.5+</li>
+      <li><strong style="color: black;">Yellow:</strong>​ 0.5 - 1.4m</li>
+      <li><strong style="color: black;">Green:</strong> 0.1 - 0.4m</li>
+      <li><strong style="color: black;">Teal:</strong> less than 0m</li>
+    </ul>
+
+    <br>    
+    <p> Additionally, AIM prioritizes visual cues: </p>
     <br>
     <ul>
         <li>Icons and text on buttons​​</li>
