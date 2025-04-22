@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADA Map | Methods</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #fff;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    .buttons {
+      margin-top: 2rem;
+    }
+    .buttons a {
+      display: inline-block;
+      background: #0066cc;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #004999;
+    }
+    ul {
+      list-style-position: inside; 
+      padding: 0;     
+      margin: 0;
+    }
+    li {
+      padding: 0; 
+      margin: 0;
+      color: black;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://adamapdev.github.io/CDay/"><h1>AIM: Accessible Interactive Map</h1></a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="https://github.com/ADAMapDev">GitHub</a>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h2>Methods</h2>
+    <p>AIM utilizes a range of APIs within Google Maps API to implement a navigation system with elevation information and locations to accessible doors on campus. Our web application finds the lowest total elevation for the user's route and displays the individual changes along the way. The accessible doors have precise coordinates for each building on the Kennesaw campus.</p>
+    <br>
+    <p>AIM uses React and Flask for simplicity, but also efficiency, prioritizing fast UI development and quick generation of the best route. PostgreSQL's data integrity is great for storing accurate building data and eventually user data.​</p>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 ADA Map Dev Team</p>
+  </footer>
+</body>
+</html>
